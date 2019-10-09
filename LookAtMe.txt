@@ -4,3 +4,4 @@ https://atom.io/packages/platformio-ide-terminal
 http://qutip.org/download.html
 https://atom.io/packages/git-plus
 http://citylights.xyz
+https://atom.io/packages/title-bar-replacer

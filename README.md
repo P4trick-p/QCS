@@ -1,2 +1,2 @@
-# PwI
-Projekt na "Programowanie w Internecie"
+# Projekt - Programowanie w Internecie
+Symulator Komputera Kwantowego

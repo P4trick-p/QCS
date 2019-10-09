@@ -1,4 +1,5 @@
-Tools'y: https://ide.atom.io -> https://atom.io/packages/atom-ide-ui
+Przydatne Tools'y: 
+https://ide.atom.io -> https://atom.io/packages/atom-ide-ui
 https://atom.io/packages/atom-ide-debugger-python
 https://atom.io/packages/platformio-ide-terminal
 http://qutip.org/download.html

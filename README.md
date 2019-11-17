@@ -1,4 +1,4 @@
-# Projekt - Programowanie w Internecie
+Projekt - Programowanie w Internecie
 Symulator Komputera Kwantowego (Quantum Computer Simulator)
   Autorzy:
     Patryk Pęcak

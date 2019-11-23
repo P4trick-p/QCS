@@ -1,8 +1,15 @@
-Przydatne Tools'y: 
+Przydatne stronki:
+https://docs.microsoft.com/en-us/quantum/?view=qsharp-preview
+https://thenewstack.io/week-programming-get-quantum-q-sharp/
+https://developer.ibm.com/code/?cm_sp=dw-_-ibmcode-_-dwblog-120patterns
+
+################################################################################
+
+Przydatne tools'y ([o] - optional): 
 https://ide.atom.io -> https://atom.io/packages/atom-ide-ui
 https://atom.io/packages/atom-ide-debugger-python
 https://atom.io/packages/platformio-ide-terminal
 http://qutip.org/download.html
-https://atom.io/packages/git-plus
-http://citylights.xyz
-https://atom.io/packages/title-bar-replacer
+[o] https://atom.io/packages/git-plus
+[o] http://citylights.xyz
+[o] https://atom.io/packages/title-bar-replacer

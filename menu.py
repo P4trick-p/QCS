@@ -1,7 +1,7 @@
 import os
 import main.qs
 
-os.system('cls' if os.name == 'nt' else 'clear')
+os.system('cls' if os.name == 'nt' else 'clear');
 
 ans=True
 while ans:

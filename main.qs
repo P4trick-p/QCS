@@ -1,53 +1,38 @@
-namespace qsharp_main
+namespace Quantum
 {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Measurement;
+    open Microsoft.Quantum.Math;
 
-    operation Teleport (msg : Qubit, target : Qubit) : Unit {
-        using (register = Qubit()) {
-              H(register);
-            CNOT(register, target);
-            CNOT(msg, register);
-            H(msg);
-            let data1 = M(msg);
-            let data2 = M(register);
+        operation SetToPlus(q: Qubit) : Unit {
+            Reset(q);
+            H(q);
+        }
 
-            if (MResetZ(msg) == One) {
-              Z(target);
-             }
-            if (IsResultOne(MResetZ(register))) {
-              X(target);
+        operation SetToMinus(q: Qubit) : Unit {
+            Reset(q);
+            X(q);
+            H(q);
+        }
+
+        operation IsPlus(q: Qubit) : Bool {
+            return (Measure([PauliX], [q]) == Zero);
+        }
+        operation IsMinus(q: Qubit) : Bool {
+            return (Measure([PauliX], [q]) == One);
+        }
+        operation PrepareRandomMessage(q: Qubit) : Unit {
+            let choice = RandomInt(2);
+
+            if (choice == 0) {
+                Message("Sending |->");
+                SetToMinus(q);
+            } else {
+                Message("Sending |+>");
+                SetToPlus(q);
             }
         }
-    }
-    operation TeleportClassicalMessage (message : Bool) : Bool {
-        using ((msg, target) = (Qubit(), Qubit())) {
-
-            if (message) {
-                X(msg);
-            }
-            Teleport(msg, target);
-            return MResetZ(target) == One;
-        }
-    }
-    operation TeleportRandomMessage () : Unit {
-      using ((msg, target) = (Qubit(), Qubit())) {
-          PrepareRandomMessage(msg);
-
-          Teleport(msg, target);
-
-          if (IsPlus(target))  {
-              Message("Received |+>");
-            }
-          if (IsMinus(target)) {
-              Message("Received |->");
-          }
-
-          Reset(msg);
-          Reset(target);
-        }
-    }
     operation SampleQrng() : Result {
        using (qubit = Qubit()) {
            H(qubit);

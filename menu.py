@@ -1,5 +1,6 @@
 import os
-import main.qs
+import qsharp
+
 
 os.system('cls' if os.name == 'nt' else 'clear');
 

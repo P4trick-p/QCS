@@ -1,5 +1,6 @@
 import os
 import qsharp
+
 import argparse
 from Microsoft.Quantum.Samples.Measurement import RunQuantumMain
 from Microsoft.Quantum.Samples.Teleportation import TeleportClassicalMessage, TeleportRandomMessage
@@ -8,6 +9,9 @@ from Microsoft.Quantum.Samples.IntegerFactorization import FactorInteger
 
 
 print(qsharp.get_workspace_operations())
+
+
+
 
 os.system('cls' if os.name == 'nt' else 'clear');
 
@@ -22,6 +26,7 @@ while ans:
     """)
     ans=raw_input("Wybierz opcje: ")
     if ans=="1":
+
       print("\n Uruchamianie Pomiaru Qbit 1");
       os.system('cls' if os.name == 'nt' else 'clear');
       RunQuantumMain.simulate()
@@ -68,6 +73,18 @@ while ans:
                     print(error)
 
 
+
+      print("\n Uruchamianie algorytmu 1");
+      os.system('cls' if os.name == 'nt' else 'clear');
+      execfile("main.qs");
+    elif ans=="2":
+      print("\n Uruchamianie algorytmu 2");
+
+    elif ans=="3":
+      print("\n Uruchamianie algorytmu 3");
+
+    elif ans=="4":
+      print("\n Uruchamianie algorytmu 4");
 
             if __name__ == "__main__":
                 parser = argparse.ArgumentParser(

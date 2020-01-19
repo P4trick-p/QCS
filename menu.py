@@ -18,9 +18,9 @@ os.system('cls' if os.name == 'nt' else 'clear');
 ans=True
 while ans:
     print ("""
-    1.Mesure
-    2.Teleportation
-    3.Algorytm 3
+    1. Mesure
+    2. Teleportation
+    3. Grover's quantum search algorithm
     4. Shor's quantum algorithm for factoring integer
     5.Wyjdz
     """)
@@ -48,8 +48,8 @@ while ans:
         for i  in range(10):
             TeleportRandomMessage.simulate()
             print("------------------")
-        elif ans=="3":
-      print("\n Uruchamianie algorytmu 3");
+    elif ans=="3":
+      print("\n Launching Grover's quantum search algorithm");
 
     elif ans=="4":
         def factor_integer(number_to_factor, n_trials, use_robust_phase_estimation):
@@ -71,20 +71,6 @@ while ans:
                 except IQSharpError as error:
                     print("This run of Shor's algorithm failed:")
                     print(error)
-
-
-
-      print("\n Uruchamianie algorytmu 1");
-      os.system('cls' if os.name == 'nt' else 'clear');
-      execfile("main.qs");
-    elif ans=="2":
-      print("\n Uruchamianie algorytmu 2");
-
-    elif ans=="3":
-      print("\n Uruchamianie algorytmu 3");
-
-    elif ans=="4":
-      print("\n Uruchamianie algorytmu 4");
 
             if __name__ == "__main__":
                 parser = argparse.ArgumentParser(

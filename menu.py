@@ -18,20 +18,20 @@ os.system('cls' if os.name == 'nt' else 'clear');
 ans=True
 while ans:
     print ("""
-    1. Mesure
+    1. Qbit measure
     2. Teleportation
     3. Grover's quantum search algorithm
     4. Shor's quantum algorithm for factoring integer
-    5.Wyjdz
+    5. Exit
     """)
     ans=raw_input("Wybierz opcje: ")
     if ans=="1":
 
-      print("\n Uruchamianie Pomiaru Qbit 1");
+      print("\n Launching Qbit measure ");
       os.system('cls' if os.name == 'nt' else 'clear');
       RunQuantumMain.simulate()
     elif ans=="2":
-        print("\n Uruchamianie algorytmu teleportacji 2");
+        print("\n Launching Teleportation");
         TeleportRandomMessage.simulate()
         print("------------------")
 
@@ -52,6 +52,7 @@ while ans:
       print("\n Launching Grover's quantum search algorithm");
 
     elif ans=="4":
+        print("\n Shor's quantum algorithm for factoring integer");
         def factor_integer(number_to_factor, n_trials, use_robust_phase_estimation):
               """ Use Shor's algorithm to factor an integer.
               Shor's algorithm is a probabilistic algorithm and can fail with certain probability in several ways.
@@ -101,9 +102,9 @@ while ans:
                 else:
                     print("Error: Invalid number. The number '-n' must be greater than or equal to 1.")
     elif ans=="5":
-      print("\n Do widzenia");
+      print("\n Goodbye");
 
     elif ans !="":
-      print("\n Nieprawidłowy argument");
+      print("\n Invalid argument");
       os.system('cls' if os.name == 'nt' else 'clear');
       execfile("menu.py");

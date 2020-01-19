@@ -6,7 +6,7 @@ from Microsoft.Quantum.Samples.Measurement import RunQuantumMain
 from Microsoft.Quantum.Samples.Teleportation import TeleportClassicalMessage, TeleportRandomMessage
 from qsharp import IQSharpError
 from Microsoft.Quantum.Samples.IntegerFactorization import FactorInteger
-
+from Microsoft.Quantum.Samples.SimpleGrover import SearchForMarkedInput
 
 print(qsharp.get_workspace_operations())
 
@@ -48,8 +48,15 @@ while ans:
         for i  in range(10):
             TeleportRandomMessage.simulate()
             print("------------------")
+
+
     elif ans=="3":
       print("\n Launching Grover's quantum search algorithm");
+
+      n_qubits = 5
+      result = SearchForMarkedInput.simulate(nQubits=n_qubits)
+      print(result)
+
 
     elif ans=="4":
         print("\n Shor's quantum algorithm for factoring integer");
@@ -101,8 +108,11 @@ while ans:
                     factor_integer(args.number, args.trials, args.use_robust_pe)
                 else:
                     print("Error: Invalid number. The number '-n' must be greater than or equal to 1.")
+
+
     elif ans=="5":
       print("\n Goodbye");
+
 
     elif ans !="":
       print("\n Invalid argument");

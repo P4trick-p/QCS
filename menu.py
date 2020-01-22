@@ -31,7 +31,9 @@ while ans:
       os.system('cls' if os.name == 'nt' else 'clear');
       RunQuantumMain.simulate()
     elif ans=="2":
+        os.system('cls' if os.name == 'nt' else 'clear');
         print("\n Launching Teleportation");
+
         TeleportRandomMessage.simulate()
         print("------------------")
 
@@ -51,14 +53,16 @@ while ans:
 
 
     elif ans=="3":
-      print("\n Launching Grover's quantum search algorithm");
+        os.system('cls' if os.name == 'nt' else 'clear');
+        print("\n Launching Grover's quantum search algorithm");
 
-      n_qubits = 5
-      result = SearchForMarkedInput.simulate(nQubits=n_qubits)
-      print(result)
+        n_qubits = 5
+        result = SearchForMarkedInput.simulate(nQubits=n_qubits)
+        print(result)
 
 
     elif ans=="4":
+        os.system('cls' if os.name == 'nt' else 'clear');
         print("\n Shor's quantum algorithm for factoring integer");
         def factor_integer(number_to_factor, n_trials, use_robust_phase_estimation):
               """ Use Shor's algorithm to factor an integer.
@@ -111,10 +115,11 @@ while ans:
 
 
     elif ans=="5":
-      print("\n Goodbye");
+        os.system('cls' if os.name == 'nt' else 'clear');
+        print("\n Goodbye");
 
 
     elif ans !="":
-      print("\n Invalid argument");
-      os.system('cls' if os.name == 'nt' else 'clear');
-      execfile("menu.py");
+        print("\n Invalid argument");
+        os.system('cls' if os.name == 'nt' else 'clear');
+        execfile("menu.py");

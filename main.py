@@ -1,6 +1,6 @@
 import os
 import qsharp
-
+from Microsoft.Quantum.Samples.SimpleGrover import SearchForMarkedInput
 import argparse
 from Measurement import RunQuantumMain
 from Teleportation import TeleportClassicalMessage, TeleportRandomMessage

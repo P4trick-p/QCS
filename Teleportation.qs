@@ -39,8 +39,8 @@ namespace Teleportation {
 
             Teleport(msg, target);
 
-            if (IsPlus(target))  { Message("Received |+>"); }
-            if (IsMinus(target)) { Message("Received |->"); }
+            if (IsPlus(target))  { Message("Received |+> Random2"); }
+            if (IsMinus(target)) { Message("Received |-> Random1"); }
 
             Reset(msg);
             Reset(target);

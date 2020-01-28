@@ -110,7 +110,6 @@ while ans:
             else:
                 print("Error: Invalid number. The number '-n' must be greater than or equal to 1.")
 
-        #factor_integer(15,100,True)
     elif ans=="5":
         os.system('cls' if os.name == 'nt' else 'clear');
         print("\n Goodbye");

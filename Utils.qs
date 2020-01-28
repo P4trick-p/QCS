@@ -26,10 +26,10 @@ namespace Teleportation {
         let choice = RandomInt(2);
 
         if (choice == 0) {
-            Message("Sending |->");
+            Message("Sending |-> Random1");
             SetToMinus(q);
         } else {
-            Message("Sending |+>");
+            Message("Sending |+> Random2");
             SetToPlus(q);
         }
     }

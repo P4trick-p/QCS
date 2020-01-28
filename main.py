@@ -89,7 +89,7 @@ while ans:
             '--number',
             type=int,
             help='number to be factored.(default=15)',
-            default=20
+            default=15
             )
             parser.add_argument(
             '-t',

@@ -8,11 +8,7 @@ from qsharp import IQSharpError
 from IntegerFactorization import FactorInteger
 from SimpleGrover import SearchForMarkedInput
 
-print(qsharp.get_workspace_operations())
-
-
-os.system('cls' if os.name == 'nt' else 'clear');
-
+os.system('cls' if os.name == 'nt' else 'clear')
 ans=True
 while ans:
     print ("""
@@ -24,12 +20,12 @@ while ans:
     """)
     ans=input("Wybierz opcje: ")
     if ans=="1":
-        print("\n Launching Qbit measure ");
-        os.system('cls' if os.name == 'nt' else 'clear');
+        print("\n Launching Qbit measure ")
+        os.system('cls' if os.name == 'nt' else 'clear')
         RunQuantumMain.simulate()
     elif ans=="2":
-        os.system('cls' if os.name == 'nt' else 'clear');
-        print("\n Launching Teleportation");
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n Launching Teleportation")
 
         TeleportRandomMessage.simulate()
         print("------------------")
@@ -49,8 +45,8 @@ while ans:
             print("------------------")
 
     elif ans=="3":
-        os.system('cls' if os.name == 'nt' else 'clear');
-        print("\n Launching Grover's quantum search algorithm");
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n Launching Grover's quantum search algorithm")
 
         n_qubits = 5
         result = SearchForMarkedInput.simulate(nQubits=n_qubits)
@@ -111,11 +107,11 @@ while ans:
                 print("Error: Invalid number. The number '-n' must be greater than or equal to 1.")
 
     elif ans=="5":
-        os.system('cls' if os.name == 'nt' else 'clear');
-        print("\n Goodbye");
-        break;
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n Goodbye")
+        break
 
     elif ans !="":
-        print("\n Invalid argument");
-        os.system('cls' if os.name == 'nt' else 'clear');
-        execfile("menu.py");
+        print("\n Invalid argument")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        #execfile("C:/Users/tom98/Documents/Testownik 2/QCS/QCS-master/main.py")
